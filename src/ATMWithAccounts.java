@@ -8,7 +8,7 @@ public class ATMWithAccounts {
             while(true){
 
                 System.out.println("welcome to Atm Simulator");
-                System.out.println("1.create Account");
+                System.out.println("1.create New Account");
                 System.out.println("2.Login");
                 System.out.println("3.Exit");
                 choice=sc.nextInt();
@@ -19,21 +19,21 @@ public class ATMWithAccounts {
                         sc.nextLine();
                         System.out.println("Enter account number");
                         int accountNo = sc.nextInt();
-                        System.out.println("Enter Pin No.");
+                        System.out.println("Enter LoginPin No.");
                         String pin = sc.next();
                         System.out.println("Enter initial Balance $");
                         double amount = sc.nextDouble();
-                        atm.createNewAccount(accountNo,pin,name,amount);
+                        atm.createNewUser(name,accountNo,pin,amount);
                         break;
                     case 2:
-                        System.out.println("Enter Account number");
-                        int accNo = sc.nextInt();
+                        System.out.println("Enter UserId");
+                        String userId = sc.next();
                         System.out.println("Enter Pin");
                         String pinNo = sc.next();
-                        if(atm.login(accNo,pinNo)){
+                        if(atm.login(userId,pinNo,sc)){
                         int ch;
                         do {
-                            System.out.println("welcome to the simple ATM");
+                            System.out.println("welcome to the simple ATM simulator");
                             System.out.println("1.check Balance");
                             System.out.println("2.Deposit");
                             System.out.println("3.Withdraw");

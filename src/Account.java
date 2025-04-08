@@ -1,25 +1,18 @@
 public class Account {
+     private static int counter=1;
      private int accountNumber;
-     private String Pin;
-     private String Name;
      private double Balance;
 
 
 
-    public Account(int accountNumber, String pin, String name, double balance) {
+    public Account(int accountNumber, double balance) {
         this.accountNumber = accountNumber;
-        Pin = pin;
-        Name=name;
         Balance = balance;
     }
 
-    public String getName() {
-        return Name;
-    }
 
-    public void setName(String name) {
-        Name = name;
-    }
+
+
 
     public int getAccountNumber() {
         return accountNumber;
@@ -27,14 +20,6 @@ public class Account {
 
     public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
-    }
-
-    public String getPin() {
-        return Pin;
-    }
-
-    public void setPin(String pin) {
-        Pin = pin;
     }
 
     public double getBalance() {
