@@ -1,7 +1,7 @@
 simple library management system(console based)
 it has features:
 # add new books-(title,author)
-# add new patron/users-(name)
+# add new patron/users-(name,borrowed books)
 # borrow  books-(keeps track of borrow date)
 # return books-(keep tracks of fine automatically)
 View: 
