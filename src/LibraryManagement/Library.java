@@ -1,11 +1,9 @@
 package LibraryManagement;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Library {
-    private final int  MAX_BOOKS=5;
-    private final int  MAX_PATRONS=5;
+    private final int  MAX_BOOKS=6;
+    private final int  MAX_PATRONS=6;
 
    private final Book[] books=new Book[MAX_BOOKS];
    private final Patrons[] patrons=new Patrons[MAX_PATRONS];

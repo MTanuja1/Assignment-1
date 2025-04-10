@@ -23,7 +23,5 @@ public class Patrons {
     public boolean hasBorrowed(int bookId){
         return borrowedBooks[bookId];
     }
-    public boolean[] getBorrowedBooks(){
-        return borrowedBooks;
-    }
+
 }
