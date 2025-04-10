@@ -24,7 +24,6 @@ public class Library {
     public boolean addBook(String title, String author) {
         if(bookCount<MAX_BOOKS){
          books[bookCount++]=new Book(title,author);
-            System.out.println("Book has successfully added to the system");
          return true;
         }else{
             System.out.println("You have reached with Max Limit");
@@ -52,7 +51,7 @@ public class Library {
         book.borrow();
         Patrons patron=patrons[patronId];
         patron.borrowBook(bookId);
-        System.out.println("Your due date is:" +book.getReturnDate());
+        System.out.println("Your due date is: " +book.getReturnDate());
         return true;
     }
 
@@ -71,7 +70,7 @@ public class Library {
             long fine=delayedDays*10;
             System.out.println("You are returning beyond returning time period so you have to pay "+fine);
         }else{
-            System.out.println("You are on time,no fine for you,Keep learning!!!");
+            System.out.println("You are on time,no fine for you,Keep reading!!!");
         }
         patron.returnBook(bookId);
         book.returnBook();

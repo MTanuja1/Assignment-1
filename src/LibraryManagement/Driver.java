@@ -47,7 +47,7 @@ public class Driver {
                         int patron_id=getValidId("patron id",library.getPatronCount());
                         int  book_id=getValidId("book id", library.getBookCount());
                         if(library.borrowBook(patron_id,book_id)){
-                            System.out.println("Borrowing successfully!!!");
+                            System.out.println("Borrowing success!!!");
                         }
                         else {
                             System.out.println("Book is not available");
