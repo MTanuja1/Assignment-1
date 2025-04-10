@@ -31,7 +31,7 @@ public class Driver {
                         if(library.addPatron(name)){
                             System.out.println("Patron added Successfully!!!");
                         }else{
-                            System.out.println("Failed to add patron.Limit reached");
+                            System.out.println("‼️‼️‼️Failed to add patron.Limit reached");
                         }
                         break;
                     case 3:
@@ -65,7 +65,7 @@ public class Driver {
                         System.out.println("Thank you for visiting,GoodBye!!!");
                         return;
                     default:
-                        System.out.println("Invalid option");
+                        System.out.println("Invalid option‼️‼️‼️");
                 }
             }while(choice!=7);
         } catch (Exception e) {
@@ -80,7 +80,7 @@ public class Driver {
         Scanner sc=new Scanner(System.in);
         int id=sc.nextInt();
         if(id<0||id>=max){
-            System.out.println("Invalid!!!");
+            System.out.println("Invalid‼️");
             return -1;
         }
         return id;
