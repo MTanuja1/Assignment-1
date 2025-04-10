@@ -21,7 +21,7 @@ public class Driver {
                         if(library.addBook(title,author)){
                             System.out.println("Book added successfully!!!");
                         }else{
-                            System.out.println("Failed to add book");
+                            System.out.println("‼️‼️‼️Failed to add book");
                         }
                         break;
                     case 2:
