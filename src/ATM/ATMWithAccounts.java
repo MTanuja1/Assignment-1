@@ -1,3 +1,5 @@
+package ATM;
+
 import java.util.Scanner;
 
 public class ATMWithAccounts {
@@ -8,7 +10,7 @@ public class ATMWithAccounts {
             while(true){
 
                 System.out.println("welcome to Atm Simulator");
-                System.out.println("1.create New Account");
+                System.out.println("1.create New ATM.ATM.Account");
                 System.out.println("2.Login");
                 System.out.println("3.Exit");
                 choice=sc.nextInt();
@@ -33,7 +35,7 @@ public class ATMWithAccounts {
                         if(atm.login(userId,pinNo,sc)){
                         int ch;
                         do {
-                            System.out.println("welcome to the simple ATM simulator");
+                            System.out.println("welcome to the simple ATM.ATM simulator");
                             System.out.println("1.check Balance");
                             System.out.println("2.Deposit");
                             System.out.println("3.Withdraw");
@@ -50,7 +52,7 @@ public class ATMWithAccounts {
                                     atm.deposit(amount1);
                                     break;
                                 case 3:
-                                    System.out.println("Enter withdrawl amount:$");
+                                    System.out.println("Enter withdraw amount:$");
                                     double withdrawAmount = sc.nextDouble();
                                     atm.withdrawl(withdrawAmount);
                                     break;
@@ -62,7 +64,7 @@ public class ATMWithAccounts {
                             System.out.println();
                         } while (ch != 4);
                 }else{
-                    System.out.println("Invalid Account info or pin");
+                    System.out.println("Invalid ATM.ATM.Account info or pin");
                 }
                 break;
                     case 3:

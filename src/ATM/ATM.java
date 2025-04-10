@@ -1,3 +1,5 @@
+package ATM;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -5,7 +7,7 @@ import java.util.Scanner;
 
 public class ATM {
 
-   private Map<String,User> users=new HashMap<>();
+   private Map<String, User> users=new HashMap<>();
    private Account currentAccount=null;
 
    public boolean login(String userId, String pin, Scanner sc){
@@ -19,7 +21,7 @@ public class ATM {
            }
            System.out.println("Select an account");
            for(int i=0;i<accountList.size();i++){
-               System.out.println((i+1)+".Account No."+accountList.get(i).getAccountNumber());
+               System.out.println((i+1)+".ATM.ATM.Account No."+accountList.get(i).getAccountNumber());
 
            }
            int choice=sc.nextInt();
@@ -56,7 +58,7 @@ public void createNewUser(String name,int accountNumber,String pin,double initia
     for (User user : users.values()) {
        for(Account account: user.getAccountsList()){
            if(user.getName().equalsIgnoreCase(name) && account.getAccountNumber()==accountNumber){
-               System.out.println("Account already exists!!!");
+               System.out.println("ATM.ATM.Account already exists!!!");
                return;
            }else if(account.getAccountNumber()!=accountNumber){
                Account account1=new Account(accountNumber,initialBalance);
@@ -71,7 +73,7 @@ public void createNewUser(String name,int accountNumber,String pin,double initia
     Account newAccount=new Account(accountNumber,initialBalance);
     newUser.addAccounts(newAccount);
     users.put(newUser.getUserId(), newUser);
-    System.out.println("Account created successfully for user "+newUser.getName()+" with userId: "+newUser.getUserId());
+    System.out.println("ATM.ATM.Account created successfully for user "+newUser.getName()+" with userId: "+newUser.getUserId());
 }}
 
 

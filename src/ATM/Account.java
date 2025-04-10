@@ -1,6 +1,8 @@
+package ATM;
+
 public class Account {
-     private static int counter=1;
-     private int accountNumber;
+
+     private final int accountNumber;
      private double Balance;
 
 
@@ -18,9 +20,6 @@ public class Account {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
-    }
 
     public double getBalance() {
         return Balance;

@@ -1,12 +1,14 @@
+package ATM;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class User {
     private static  int counter=1;
-    private String name;
-    private  String userId;
-    private String pin;
-    private List<Account> accountsList=new ArrayList<>();
+    private final String name;
+    private final String userId;
+    private final String pin;
+    private final List<Account> accountsList=new ArrayList<>();
 
     public User(String name, String pin) {
         this.name = name;
@@ -15,7 +17,7 @@ public class User {
     }
 
     public String generateUserId(){
-        return "User"+String.format("%03d",counter++);
+        return "ATM.User"+String.format("%03d",counter++);
     }
 
     public String getName() {
