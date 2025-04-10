@@ -68,7 +68,7 @@ public class Library {
         long delayedDays=java.time.Duration.between(dueDate,now).toDays();
         if(delayedDays>0){
             long fine=delayedDays*10;
-            System.out.println("You are returning beyond returning time period so you have to pay "+fine);
+            System.out.println("You are returning beyond time period your fine is: "+fine);
         }else{
             System.out.println("You are on time,no fine for you,Keep reading!!!");
         }
