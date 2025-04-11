@@ -21,15 +21,24 @@ public class Library {
     public Book[] getBooks(){
         return books;
     }
+
     public boolean addBook(String title, String author) {
-        if(bookCount<MAX_BOOKS){
-         books[bookCount++]=new Book(title,author);
-         return true;
-        }else{
-            System.out.println("You have reached with Max Limit");
-            return false;
-        }
-    }
+
+        for (Book book : books) {
+            if (book!=null && book.getTitle().equalsIgnoreCase(title)) {
+                System.out.println("Book already exists!,please add another book");
+                return false;
+            } }
+                if (bookCount < MAX_BOOKS) {
+                    books[bookCount++] = new Book(title, author);
+                    return true;
+                } else {
+                    System.out.println("😢 You have reached with Max Limit");
+                    return false;
+                }
+            }
+
+
 
     public boolean addPatron(String name) {
         if(patronCount>=MAX_PATRONS){
